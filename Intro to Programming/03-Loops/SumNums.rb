@@ -12,14 +12,16 @@
 # in the while loop needs rethinking. Plan on paper!
 def sum_nums(max)
 	sum = 0
-	i = 1
 	
+	i = 1	
   	while i <= max
   		sum = max + (max + 1)
       	sum += 1
+
+      	puts i
       	i += 1
     end
-  	puts max
+  	
 	return sum
 end
 
