@@ -25,4 +25,6 @@ end
 
 
 #  ---------- Tests ----------
-
+puts word_check("contraption") # => "long"
+puts word_check("fruit")       # => "short"
+puts word_check("puzzle")      # => "medium"

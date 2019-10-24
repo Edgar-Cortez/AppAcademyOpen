@@ -20,7 +20,15 @@ end
 
 
 # ---------- Their Solution ----------
-
+# def number_check(num)
+#   if num > 0
+#     return "positive"
+#   elsif num < 0
+#     return "negative"
+#   else
+#     return "zero"
+#   end
+# end
 
 #  ---------- Tests ----------
 puts number_check(5)    # => "positive"
