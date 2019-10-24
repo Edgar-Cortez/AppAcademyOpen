@@ -25,7 +25,7 @@ end
 
 
 # ---------- Their Solution ----------
-
+# 
 # def sum_nums(max)
 #   sum = 0
 
