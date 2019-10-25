@@ -22,6 +22,7 @@ def yell(words)
 
 		i += 1
 	end
+	
 	return words_bang
 end
 
