@@ -20,7 +20,7 @@ def element_times_index(numbers)
 		number = numbers[i] * i
 		number_multiplied << number
 
-		i += 1
+		i += 
 	end
 
 	return number_multiplied	
