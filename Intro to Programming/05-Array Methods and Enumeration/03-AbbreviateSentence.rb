@@ -12,6 +12,7 @@
 
 
 # ---------- My Attempt ----------
+#  This is not my code... just adding notes from the walkthrough
 def abbreviate_sentence(sent)	
 	words = sent.split(" ")
 	# print words
@@ -19,16 +20,12 @@ def abbreviate_sentence(sent)
 
 # Each function should handle one task.
 # This is the reason for seperating the task in two 
-
-
 	words.each do |word|
-      	if word.length > 4
-      		# do some code
+      	if word.length > 4      		
       		# calls a helper function everytime the word is longer than 4
       		new_word = abbreviate_word(word)
       		new_wors << new_word
-		else
-			# do some code
+		else			
 			new_words << new_word
       	end
   	end  
@@ -43,7 +40,6 @@ def abbreviate_word(word)
 
 	word.each_char do |char|
 		if !vowels.include?(char)
-			# do some code
 			no_vowels += char
 		end	
 	end	
