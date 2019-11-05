@@ -5,6 +5,7 @@
 # 	- convert string to lowercase using string.downcase
 # 	- split the string 
 # 	- convert index 0 of each element to uppercase
+# 		- slice the index 0 to the rest of the element
 # 	- array.join new strings
 # 	- return string
 
