@@ -69,15 +69,21 @@ end
 
 # ---------- Their Solution ----------
 # def array_translate(array)
+
+# Create an empty string because that is what we want returned
 #   str = ""
 
+# Use a while loop to traverse the array
 #   i = 0
 #   while i < array.length
-#     ele = array[i]
-#     num = array[i + 1]
-#     num.times { str += ele }
-
-#     i += 2
+#     ele = array[i]            # grabs odd element
+#     num = array[i + 1]        # grabs even element
+# ---------------------------------------------------------
+# These do the same thing
+    # new_str = ele * num       # concatenates using string arithmetic
+    # num.times { str += ele }  # concatenates using a enumerable method
+# ---------------------------------------------------------
+#     i += 2                    # you make sure you jump by two through the array
 #   end
 
 #   return str
