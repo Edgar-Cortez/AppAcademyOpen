@@ -59,37 +59,36 @@ end
 
 # This makes sure that the given input is at least two elements
 # long (for validation)
-# def is_valid_name(str)
-#   parts = str.split(" ")
-#   if parts.length < 2
-#     return false
-#   end
+def is_valid_name(str)
+  parts = str.split(" ")
+  if parts.length < 2
+    return false
+  end
 
 
 # Iterates through every part of the given input
 # Calls the is_capitalized and takes the result of the helper function 
-#   parts.each do |part|
-#     if !is_capitalized(part)
-#       return false
-#     end
-#   end
+  parts.each do |part|
+    if !is_capitalized(part)
+      return false
+    end
+  end
 
-#   return true
-# end
+  return true
+end
 
 # This helper function takes an input.
 # Checks that the first character is uppercase and the rest is lower case 
-# def is_capitalized(word)
+def is_capitalized(word)
 
-# word[0] the chr at first index
-# word[1..-1] the chr's in the rest index
-
-#   if word[0] == word[0].upcase && word[1..-1] == word[1..-1].downcase
-#     return true
-#   else
-#     return false
-#   end
-# end
+# 	word[0] the chr at first index
+# 	word[1..-1] the chr's in the rest index
+	if word[0] == word[0].upcase && word[1..-1] == word[1..-1].downcase
+    	return true
+  	else
+    	return false
+ 	end
+end
 
 
 #  ---------- Tests ----------
