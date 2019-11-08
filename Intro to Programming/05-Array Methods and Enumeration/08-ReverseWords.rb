@@ -31,7 +31,18 @@ def reverse_words(sent)
 end
 
 # ---------- Their Solution ----------
-
+# def reverse_words(sent)
+# 	# split the string into an array by words
+#   	words = sent.split(" ")
+#   	# create an empty array
+#   	new_words = []
+#   	# does what line 21 - 24 in one line.
+#   	# I didn't know I can shovel elements that are being modified by a method
+#   	words.each { |word| new_words << word.reverse }
+#   	# joins the elements and add a space in between as a complete string
+#   	new_sent = new_words.join(" ")
+#   	return new_sent
+# end
 
 #  ---------- Tests ----------
 puts reverse_words('keep coding') # => 'peek gnidoc'
