@@ -14,9 +14,21 @@
 
 # ---------- My Attempt ----------
 def reverse_words(sent)
-
+	rev_array = []
+  	convert = sent.split(" ")
+  	print convert
+  
+  	convert.each do |word|
+  		reversed = word.reverse
+  		rev_array << reversed
+	end
+    
+  	puts
+	print rev_array
+  	puts
+  	
+	return rev_array.join(" ")
 end
-
 
 # ---------- Their Solution ----------
 
