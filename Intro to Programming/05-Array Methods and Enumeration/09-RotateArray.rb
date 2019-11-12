@@ -4,21 +4,41 @@
 # the front. 
 
 # ---------- Steps ----------
-# 	- 
-# 	- loop push/pop/shift/unshift based on number parameter
-# 	- 
-# 	- return new array
+# 	- set increment to default value
+# 	- while loop and iterate based on num parameter
+# 	- create a temp variable to hold the the removed element from .pop
+# 	- create a temp variable to hold and insert the removed element with unshift
+# 	- return the edited array
 
 
 # ---------- My Attempt ----------
 
 def rotate_array(arr, num)
+	i = 0
+	while i < num
+		temp = arr.pop
+		# puts temp
+
+		temp2 = arr.unshift (temp)
+		# puts temp2
+
+		i += 1
+	end
+		return arr 
 
 end
 
 
 # ---------- Their Solution ----------
+# used the .times and a do loop to do lines 17 - 26
+# def rotate_array(arr, num)
+#   num.times do
+#     ele = arr.pop
+#     arr.unshift(ele)
+#   end
 
+#   return arr
+# end
 
 #  ---------- Tests ----------
 print rotate_array([ "Matt", "Danny", "Mashu", "Matthias" ], 1) # => [ "Matthias", "Matt", "Danny", "Mashu" ]
