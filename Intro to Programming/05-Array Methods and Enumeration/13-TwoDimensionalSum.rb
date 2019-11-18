@@ -2,19 +2,32 @@
 # the sum of all elements in the array.
 
 # ---------- Steps ----------
-# 	- 
-# 	- 
-# 	- 
+# 	- Initialize the variable that holds the total
+# 	- Iterate through elements of this array (these elements are arrays
+# 	- Iterate through elements from above
+# 	- Add the elements and update the initialized variable
+# 	- return the variable
 
 
 # ---------- My Attempt ----------
-def two_d_sum(arr)
-
-end
+# Couldn't figure this one out
 
 
 # ---------- Their Solution ----------
+def two_d_sum(arr)
+	total = 0
 
+	# 1st Level: Looking at each element (these are also arrays)
+	arr.each do |sub_arr|
+		# 2nd Level: Looking at each elements of these arrays
+		sub_arr.each do |ele|
+			# add each element to the total
+			total += ele
+		end
+	end
+
+	return total
+end
 
 #  ---------- Tests ----------
 
