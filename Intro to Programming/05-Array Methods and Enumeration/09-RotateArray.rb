@@ -31,6 +31,7 @@ end
 
 # ---------- Their Solution ----------
 # used the .times and a do loop to do lines 17 - 26
+
 # def rotate_array(arr, num)
 #   num.times do
 #     ele = arr.pop
