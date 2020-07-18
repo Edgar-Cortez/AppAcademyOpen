@@ -23,15 +23,23 @@
 # end
 
 
+# Broken Down Version
+# hash = {}
+# word = "bootcamp"
+# hash[word] = word.length
+# puts hash
+
 # ---------- Their Solution ----------
 def word_lengths(sentence)
     words = sentence.split(" ")
+    print "Array: ", words
+    puts
     lengths = {}
-  
-    words.each { |word| lengths[word] = word.length}
-  
+
+    words.each { |word| lengths[word] = word.length }
+    print "Hash: "
     return lengths
-  end
+end
 
 #  ---------- Tests ----------
 puts word_lengths("this is fun") #=> {"this"=>4, "is"=>2, "fun"=>3}
