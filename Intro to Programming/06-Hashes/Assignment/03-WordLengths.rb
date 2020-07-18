@@ -10,22 +10,28 @@
 
 
 # ---------- My Attempt ----------
-def word_lengths(sentence)
-    sentence_array = sentence.split
-    sentence_hash = Hash.new(empty)
+# def word_lengths(sentence)
+#     sentence_array = sentence.split
+#     sentence_hash = Hash.new(empty)
 
-    sentence_array.each do |word|
-        
-    end
+#     sentence_array.each do |key, value|
+#         sentence_array[word]
+#     end
 
-    print sentence_array.length
-end
+#     print sentence_array
+#     # print sentence_array.length
+# end
 
 
 # ---------- Their Solution ----------
-# def word_lengths(sentence)
-
-# end
+def word_lengths(sentence)
+    words = sentence.split(" ")
+    lengths = {}
+  
+    words.each { |word| lengths[word] = word.length}
+  
+    return lengths
+  end
 
 #  ---------- Tests ----------
 puts word_lengths("this is fun") #=> {"this"=>4, "is"=>2, "fun"=>3}
