@@ -23,17 +23,17 @@ end
 
 
 # ---------- Their Solution ----------
-def ae_count(str)
-    count = {"a"=>0, "e"=>0}
+# def ae_count(str)
+#     count = {"a"=>0, "e"=>0}
   
-    str.each_char do |char|
-      if (char == "a" || char == "e")
-        count[char] += 1
-      end
-    end
+#     str.each_char do |char|
+#       if (char == "a" || char == "e")
+#         count[char] += 1
+#       end
+#     end
   
-    return count
-end
+#     return count
+# end
 
 #  ---------- Tests ----------
 puts ae_count("everyone can program") #=> {"a"=>2, "e"=>3}
