@@ -12,17 +12,17 @@
 
 
 # ---------- My Attempt ----------
-def element_replace(arr, hash)
-	replace = {}
+# def element_replace(arr, hash)
+# 	replace = {}
   
-  	arr.each { |ele| 
-      if hash.has_key?(ele)
-    	replace += hash[ele]
+#   	arr.each { |ele| 
+#       if hash.has_key?(ele)
+#     	replace += hash[ele]
       
-      end
-    }
-  	return replace
-end
+#       end
+#     }
+#   	return replace
+# end
 
 
 # ---------- Their Solution ----------
