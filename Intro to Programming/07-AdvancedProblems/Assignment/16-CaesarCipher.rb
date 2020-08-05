@@ -46,4 +46,6 @@ def caesar_cipher(str, num)
   end
 
 #  ---------- Tests ----------
-
+puts caesar_cipher("apple", 1)    #=> "bqqmf"
+puts caesar_cipher("bootcamp", 2) #=> "dqqvecor"
+puts caesar_cipher("zebra", 4)    #=> "difve"
