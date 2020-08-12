@@ -4,8 +4,13 @@
 # 1 is the only number that divides both 25 and 12.
 
 
+# Used greatest common divisor method   .gcd    to check if they == 1
 def coprime?(num_1, num_2)
-    
+    if num_1.gcd(num_2) == 1
+        return true
+    end
+
+    return false
 end
 
 p coprime?(25, 12)    # => true
