@@ -3,6 +3,27 @@
 # The method should return the array.
 # Do not use the built-in Array#sort
 
+def bubble_sort(arr)
+    # when this is false, the array is not fully sorted yet
+    sorted = false
+
+    while !sorted
+        # Reset to true to continue the sort
+        sorted = true
+
+        # Iterates through the array and performs a single pass
+        (0...arr.length - 1).each do |i|
+            # if first element is greater than second element, swap them and set to false
+            # Settting to false will provide one more pass in case array is not fully sorted
+            if arr[i] > arr[i + 1]
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+                sorted = false
+            end
+        end
+    end
+
+    return arr
+end
 
 p bubble_sort([2, 8, 5, 2, 6])      # => [2, 2, 5, 6, 8]
 p bubble_sort([10, 8, 7, 1, 2, 3])  # => [1, 2, 3, 7, 8, 10]
