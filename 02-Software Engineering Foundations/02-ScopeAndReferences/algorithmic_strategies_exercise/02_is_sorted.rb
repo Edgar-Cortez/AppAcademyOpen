@@ -4,14 +4,18 @@
 
 def is_sorted(arr)
 
+    # Go through the array and check two elements at a time
+    # If first element is greater than the second, return false
+    # This means that it's not in order
     (0...arr.length - 1).each do |i|
         if arr[i] > arr[i + 1]
             return false
         end
-        
+
         # return false if arr[i] > arr[i + 1]
     end
 
+    # If after iterating through entire array with out flagging false its means it's sorted
     return true
 end
 
