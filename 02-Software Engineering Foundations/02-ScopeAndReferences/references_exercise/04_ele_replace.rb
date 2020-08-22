@@ -6,8 +6,15 @@
 # to the object_id of the returned array. The exact object_ids you get back don't matter. We just want the ids
 # to be the same before and after calling your method.
 
+# Given Solution
 def ele_replace!(array, hash)
-
+    array.map! do |ele|
+        if hash.has_key?(ele)
+            hash[ele]
+        else
+            ele
+        end
+    end
 end
 
 

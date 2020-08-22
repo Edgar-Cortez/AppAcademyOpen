@@ -9,11 +9,43 @@
 # to the object_id of the returned array. The exact object_ids you get back don't matter. We just want the ids
 # to be the same before and after calling your method.
 
+# My Attempt
+# def my_rotate!(array, amt)
+#     count = 0
 
+#     while count < amt
+#         array.each.with_index do |ele, i|
+#             print array[i], array[i + 1]
+#             count += 1
+#         end
+#     end
+    
+#     return array
+# end
+
+# Given Solution
 def my_rotate!(array, amt)
+    # Check if the amt is positive
+    if amt > 0
+        # will iterate by the amt value
+        amt.times do
+            # grab first element and remove
+            ele = array.shift
+            # move it to the end of array
+            array << ele
+        end 
+    else
+        # times only accepts positive numbers. So, since, amt is negative add a - to make it positive
+        (-amt).times do
+            # Grabs last element in array 
+            ele =  array.pop
+            # Moves it to the front
+            array.unshift(ele)
+        end
+    end
 
+    return array
 end
-
 
 array_1 = ["a", "b", "c", "d"]
 p array_1.object_id                 # => 70354216023780
