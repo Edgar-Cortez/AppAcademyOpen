@@ -14,6 +14,17 @@ def palindrome?(str)
   else
     true
   end
+
+  # Given Solution
+  # str.each_char.with_index do |char, i|
+  #  # it looking at the beginning and end at the same time, if the don't match return false
+  #   if string[i] != string[-i - 1]
+  #     return false
+  #   end
+  # end
+
+  # after running throught the whole string and it passes return true, because it's a palindrome
+  # true
 end
 
 def substrings(str)
@@ -26,13 +37,22 @@ def substrings(str)
   end
 
   output
+
+  # Given Solution
+  # subs = []
+
+  # (0...str.length).each do |star_idx|
+  #   (star_idx...str.length).each do |end_idx|
+  #     output << str[star_idx..end_idx]
+  #   end
+  # end
+
+  # subs
 end
 
 def palindrome_substrings(str)
   arr = []
-
   sub = substrings(str)
-  p sub
 
   sub.map do |ele|
     if palindrome?(ele) && ele.length > 1
@@ -41,4 +61,8 @@ def palindrome_substrings(str)
   end
   
   arr
+
+  # Given Solution
+  # substrings(str).select { |substr| palindrome?(substr) && substr.length > 1 }
+
 end
