@@ -28,4 +28,17 @@ def substrings(str)
   output
 end
 
+def palindrome_substrings(str)
+  arr = []
 
+  sub = substrings(str)
+  p sub
+
+  sub.map do |ele|
+    if palindrome?(ele) && ele.length > 1
+      arr << ele
+    end
+  end
+  
+  arr
+end
