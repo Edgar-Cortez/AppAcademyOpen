@@ -16,4 +16,16 @@ def palindrome?(str)
   end
 end
 
+def substrings(str)
+  output = []
+
+  (0...str.length).each do |i|
+    (i...str.length).each do |j|
+      output << str[i..j]
+    end
+  end
+
+  output
+end
+
 
