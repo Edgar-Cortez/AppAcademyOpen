@@ -20,34 +20,22 @@ def merge(hash_1, hash_2)
 end
 
 def censor(sentence, arr)
-  # new_sentence = sentence.split(' ')
+  new_sentence = sentence.split(' ')
 
-  # same_words = new_sentence & arr
+  new_sentence.map do |word|
+    if arr.include?(word.downcase)
+      check_vowels(word)
+    else
+      word
+    end
+  end
 
-  # same_words.each do |word|
-  #   check_vowels(word)
-  # end
-
-  # # iterate through sentence
-  # new_sentence.each do | word |
-  #   # check if the word is in the array
-  #   # if word == arr[word]
-  #   if arr.include?(new_sentence[word])
-  #     check_vowels(word)
-  #   else
-  #     word
-  #   end
-
-  #   # true: use check_vowels method on word
-  #   # false: return word
-  # end
-
-  # new_sentence.join(' ')
+  new_sentence.join(' ')
 end
 
-def check_vowels(word)
-  new_word = word.gsub(/[aeiouAEIOU]/, '*')
-  new_word
+def check_vowels(str)
+  new_word = str.gsub!(/[aeiouAEIOU]/, '*')
+  return new_word
 end
 
 def power_of_two?(num)
