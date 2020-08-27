@@ -5,14 +5,15 @@
 
 require "byebug"
 
-def prime(num)
+def prime?(num)
     return false if num < 2
 
     (2...num).each do |factor|
+        # debugger
         if num % factor == 0
-            return false
-        else
-            return true
+            return false            
         end
     end
+
+    return true
 end
