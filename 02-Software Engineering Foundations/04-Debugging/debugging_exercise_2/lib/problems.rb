@@ -16,6 +16,15 @@ def largest_prime_factor(num)
     return prime_factors.last
 end
 
+# Given Solution
+# def largest_prime_factor(num)
+#     num.downto(2) do |factor|
+#         if num % factor == 0 && prime?(factor)
+#             return factor
+#         end
+#     end
+# end
+
 def prime?(num)
     return false if num < 2
 
@@ -44,7 +53,23 @@ def unique_chars?(str)
     end
 end
 
-# 3
+# Given Solution
+# def unique_chars?(str)
+#     already_seen = []
+
+#     str.each_char do |char|
+#         if already_seen.include?(char)
+#             return false
+#         end
+#         already_seen << char
+#     end
+
+#     true
+# end
+
+# 3 Could not figure this one out
+
+# Given Solution
 def dupe_indices(arr)
     idxs = Hash.new { |h, k| h[k] = [] }
     
