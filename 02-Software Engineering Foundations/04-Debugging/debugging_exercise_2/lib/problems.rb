@@ -28,6 +28,7 @@ def prime?(num)
     return true
 end
 
+
 # 2
 def unique_chars?(str)
     char_count =  Hash.new(0)
@@ -42,3 +43,34 @@ def unique_chars?(str)
         return true
     end
 end
+
+# 3
+def dupe_indices(arr)
+    idxs = Hash.new { |h, k| h[k] = [] }
+    
+    arr.each_with_index do |ele, i|
+        idxs[ele] << i
+    end
+
+    return idxs.select { |ele, arr| arr.length > 1 }
+end
+
+# # 4
+# def ana_array(arr_1, arr_2)  
+
+#     if hash_count(arr_1) == hash_count(arr_2)
+#         true
+#     else
+#         false
+#     end
+# end
+
+# def hash_count(arr)
+#     char_count =  Hash.new(0)
+
+#     arr.each do |ele|
+#         char_count[ele] += 1
+#     end
+
+#     return char_count
+# end
