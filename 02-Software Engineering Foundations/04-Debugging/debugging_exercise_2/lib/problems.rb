@@ -55,22 +55,22 @@ def dupe_indices(arr)
     return idxs.select { |ele, arr| arr.length > 1 }
 end
 
-# # 4
-# def ana_array(arr_1, arr_2)  
+# 4
+def ana_array(arr_1, arr_2)  
 
-#     if hash_count(arr_1) == hash_count(arr_2)
-#         true
-#     else
-#         false
-#     end
-# end
+    if hash_count(arr_1) == hash_count(arr_2)
+        true
+    else
+        false
+    end
+end
 
-# def hash_count(arr)
-#     char_count =  Hash.new(0)
+def hash_count(arr)
+    char_count =  Hash.new(0)
 
-#     arr.each do |ele|
-#         char_count[ele] += 1
-#     end
+    arr.each do |ele|
+        char_count[ele] += 1
+    end
 
-#     return char_count
-# end
+    return char_count
+end
