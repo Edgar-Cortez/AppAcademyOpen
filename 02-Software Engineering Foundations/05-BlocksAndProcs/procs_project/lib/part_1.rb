@@ -49,3 +49,19 @@ def my_any?(arr, &prc)
         false
     end
 end
+
+# 5
+def my_all?(arr, &prc)
+    counter = 0
+    arr.each do |ele|
+        if prc.call(ele) == true
+            counter += 1
+        end
+    end
+
+    if counter == arr.size
+        true
+    elsif counter == 0 || counter < arr.size
+        false
+    end
+end
