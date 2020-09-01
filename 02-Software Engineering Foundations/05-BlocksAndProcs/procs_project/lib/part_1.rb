@@ -48,6 +48,15 @@ def my_any?(arr, &prc)
     else
         false
     end
+
+    # Given Solution
+    # arr.each do |ele|
+    #     if prc.call(ele) == true
+    #         return true
+    #     end
+    # end
+
+    # false
 end
 
 # 5
@@ -64,6 +73,14 @@ def my_all?(arr, &prc)
     elsif counter == 0 || counter < arr.size
         false
     end
+
+    # Given Solution
+    # arr.each do |ele|
+    #     if prc.call(ele) == false
+    #         return false
+    #     end
+    # end
+    # true
 end
 
 # 6
@@ -80,4 +97,12 @@ def my_none?(arr, &prc)
     else
         false
     end
+
+    # Given Solution
+    # arr.each do |ele|
+    #     if prc.call(ele) == true
+    #         return false
+    #     end
+    # end
+    # true
 end
