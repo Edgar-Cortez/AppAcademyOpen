@@ -65,3 +65,19 @@ def my_all?(arr, &prc)
         false
     end
 end
+
+# 6
+def my_none?(arr, &prc)
+    counter = 0
+    arr.each do |ele|
+        if prc.call(ele) == true
+            counter += 1
+        end
+    end
+
+    if counter == 0
+        true
+    else
+        false
+    end
+end
