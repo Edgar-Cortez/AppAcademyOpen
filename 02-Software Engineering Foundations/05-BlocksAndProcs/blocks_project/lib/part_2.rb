@@ -26,5 +26,11 @@ def no_valid_url?(arr)
     end
 end
 
+# #3 
+def any_passing_students?(arr)
+    arr.any? { |hash| average(hash[:grades]) >= 75}
+end
 
-
+def average(arr)
+    arr.sum / ( arr.size * 1.0)
+end
