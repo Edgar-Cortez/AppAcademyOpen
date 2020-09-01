@@ -33,17 +33,30 @@ end
 
 # 4
 def aba_translate(str)
-    vowels = "aeiou"
-    # arr = str.split('')
-    translated = str.each_char do |char|
-        if vowels.include?(char) 
-            str.split(char)
-        # else
-        #     char
-        end
-    end
+    # vowels = "aeiou"
+    # # arr = str.split('')
+    # translated = str.each_char do |char|
+    #     if vowels.include?(char) 
+    #         new_str =  char + "b" + char
+            
+    #     end
+    # end
     
-    translated
+    # translated
+
+    vowels ="aeiou"
+    new_word = ""
+
+    str.each_char do |char|
+        if vowels.include?(char)
+            new_word += char + "b" + char
+        else
+            new_word += char
+        end
+        
+    end
+
+    new_word
 end
 
 
