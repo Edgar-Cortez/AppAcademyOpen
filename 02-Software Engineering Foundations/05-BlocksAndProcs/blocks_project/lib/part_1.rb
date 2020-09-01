@@ -59,5 +59,12 @@ def aba_translate(str)
     new_word
 end
 
+def aba_array(arr)
+    new_arr = arr.map do |ele|
+        aba_translate(ele)
+    end
+
+    new_arr
+end
 
 
