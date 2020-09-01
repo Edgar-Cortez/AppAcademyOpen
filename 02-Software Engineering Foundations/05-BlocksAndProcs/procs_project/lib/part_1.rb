@@ -19,3 +19,15 @@ def my_select(arr, &prc)
 
     new_arr
 end
+
+
+def my_count(arr, &prc)
+    counter = 0
+    arr.each do |ele|
+        if prc.call(ele) == true
+            counter += 1
+        end
+    end
+
+    counter
+end
