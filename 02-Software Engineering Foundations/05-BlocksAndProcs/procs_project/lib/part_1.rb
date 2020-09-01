@@ -1,5 +1,6 @@
 require "byebug"
 
+# 1
 def my_map(arr, &prc)
     new_arr = []
     arr.each do |ele|
@@ -9,6 +10,7 @@ def my_map(arr, &prc)
     new_arr
 end
 
+# 2
 def my_select(arr, &prc)
     new_arr = []
     arr.each do |ele|
@@ -20,7 +22,7 @@ def my_select(arr, &prc)
     new_arr
 end
 
-
+# 3
 def my_count(arr, &prc)
     counter = 0
     arr.each do |ele|
@@ -30,4 +32,20 @@ def my_count(arr, &prc)
     end
 
     counter
+end
+
+# 4
+def my_any?(arr, &prc)
+    counter = 0
+    arr.each do |ele|
+        if prc.call(ele) == true
+            counter += 1
+        end
+    end
+
+    if counter > 0
+        true
+    else
+        false
+    end
 end
