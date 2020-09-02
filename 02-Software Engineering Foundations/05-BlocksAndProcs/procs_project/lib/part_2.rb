@@ -17,3 +17,15 @@ def word_changer(str, &prc)
 
     new_str.join(' ')
 end
+
+# 3
+def greater_proc_value(num, prc_1, prc_2)
+    result_1 = prc_1.call(num)
+    result_2 = prc_2.call(num)
+
+    if result_1 > result_2
+        result_1
+    else
+        result_2
+    end
+end
