@@ -40,3 +40,16 @@ def and_selector(arr, prc_1, prc_2)
         end
     end
 end
+
+# 5
+def alternating_mapper(arr, prc_1, prc_2)
+    new_arr = arr.map.with_index do |ele, i|    
+        if i % 2 == 0
+            prc_1.call(ele)
+        else
+            prc_2.call(ele)
+        end
+    end
+    
+    new_arr
+end
