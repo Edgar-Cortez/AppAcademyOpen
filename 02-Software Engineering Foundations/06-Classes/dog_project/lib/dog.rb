@@ -37,11 +37,10 @@ class Dog
     def favorite_food?(string)
         new_food = string.capitalize
         
-        if @favorite_foods.include?(new_food)
-            true
-        else
-            false
-        end 
+        @favorite_foods.include?(new_food)
+        
+        # Given Solution
+        # @favorite_foods.map(&:downcase).include?(string.downcase)
     end
 
     # setters
