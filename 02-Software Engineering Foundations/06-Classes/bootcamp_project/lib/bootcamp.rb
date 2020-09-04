@@ -43,6 +43,14 @@ class Bootcamp
     else
       false
     end
+
+    # Given Solution
+    # if @students.length < @student_capacity 
+    #   @students << student
+    #   return true
+    # end
+
+    # false
   end
 
   def enrolled?(student)
@@ -60,6 +68,14 @@ class Bootcamp
     else
       false
     end
+
+    # Given Solution
+    # if self.enrolled?(student)
+    #   @grades[student] << grade
+    #   true
+    # else
+    #   false
+    # end
   end
 
   def num_grades(student)
@@ -72,5 +88,15 @@ class Bootcamp
     else
       nil
     end
+
+    # Given Solution
+    # if self.enrolled?(student) && self.num_grades(student) > 0
+    #   grades = @grades[student]
+    #   sum = 0
+    #   grades.each { |grade| sum += grade }
+    #   return sum / grades.length
+    # end
+
+    # nil
   end
 end
