@@ -35,4 +35,65 @@ class Array
 
     count
   end
+
+  def my_count(ele)
+    hash = self.counts
+    hash[ele]
+
+    # GIVEN SOLUTION
+    # num = 0
+    # self.each do |el|
+    #   if el == ele
+    #     num += 1
+    #   end 
+    # end
+
+    # num
+  end
+
+  def my_index(ele)
+    self.each_with_index do |el , i|
+      if el == ele
+        return i
+      end
+    end
+
+    return nil
+  end
+
+  def my_uniq
+    uniq_arr = []
+    hash = self.counts
+
+    hash.each_key { |key| uniq_arr << key }
+
+    uniq_arr
+
+    # GIVEN SOLUTION
+    # hash = {}
+    # self.each { |ele| hash[ele] = true }
+    # hash.keys
+  end
+
+  def my_transpose
+    # FOUND SOLUTION
+    self.each_with_index.map do |_, index|
+      self.map { |row| row[index] }
+    end
+
+    # GIVEN SOLUTION
+    new_arr = []
+    (0...self.length).each do |row|
+      new_row = []
+      
+      (0...self.length).each do |col|
+        # new_row << self[row][col] # Creates an exact duplicate of original array
+        new_row << self[col][row]
+      end
+      
+      new_arr << new_row
+    end
+    new_arr
+  end
 end
+
