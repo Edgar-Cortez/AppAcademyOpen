@@ -16,13 +16,13 @@ class GuessingGame
     def check_num(num)
         @num_attempts += 1
 
-        if num == @secret_num
+        if num > @secret_num
+            p "too big"
+        elsif num < @secret_num
+            p "too small"
+        else num == @secret_num
             @game_over = true
             p "you win"
-        elsif num > @secret_num
-            p "too big"
-        else
-            p "too small"
         end
     end
 
@@ -30,6 +30,6 @@ class GuessingGame
         p 'enter a number'
         number = gets.chomp.to_i
 
-        self.check_num(number)
+        check_num(number)
     end
 end
