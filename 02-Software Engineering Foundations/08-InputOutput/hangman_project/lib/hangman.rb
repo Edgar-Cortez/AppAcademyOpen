@@ -11,7 +11,7 @@ class Hangman
     @attempted_chars = []
     @remaining_incorrect_guesses = 5
   end
-
+  
   def guess_word
     @guess_word
   end
@@ -25,16 +25,35 @@ class Hangman
   end
 
   def already_attempted?(char)
-    if attempted_chars.include?(char)
-      true
-    else
-      false
-    end
+    # if attempted_chars.include?(char)
+    #   true
+    # else
+    #   false
+    # end
+
+    # Given Solution
+    @attempted_chars.include?(char)
   end
 
   def get_matching_indices(char)
-    if !@secret_word.include?(char)
-      return []
+    # Given Solution
+    matching_indices = []
+
+    @secret_word.each_char.with_index do |secret_char, i|
+      if char == secret_char
+        matching_indices << i    
+      end
+    end
+
+    matching_indices
+  end
+  
+
+  def fill_indices(char, indices)
+    indices.each do |index|
+      @guess_word[index] = char
     end
   end
 end
+
+
