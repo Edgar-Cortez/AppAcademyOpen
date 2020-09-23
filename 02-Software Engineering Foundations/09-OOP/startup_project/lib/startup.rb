@@ -59,4 +59,47 @@ class Startup
    end
   end
   
+  def average_salary
+    # total = 0
+
+    # @employees.each do |employee|
+    #   total += @salaries[employee.title]
+    # end
+    
+    # total / self.size
+
+    # Given Solution
+    sum = 0
+
+    @employees.each do |employee|
+      sum += @salaries[employee.title]
+    end
+    
+    sum / (@employees.length * 1.0)
+  end
+
+  def close
+    @employees = []
+    @funding = 0
+  end
+
+  def acquire(startup)
+    # @funding += startup.funding
+    # @salaries = startup.salaries.merge(@salaries)
+    # (@employees << startup.employees).flatten!
+    # startup.close
+
+    # Given Solution
+    @funding += startup.funding
+    
+    startup.salaries.each do |title, amount|
+      if !@salaries.has_key?(title)
+        @salaries[title] = amount
+      end
+    end
+
+    @employees += startup.employees
+
+    startup.close
+  end
 end
