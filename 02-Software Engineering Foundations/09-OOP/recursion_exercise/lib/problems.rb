@@ -125,5 +125,19 @@ end
 #     2-dimensional array: [['some data']]
 #     3-dimensional array: [[['some data']]]
 def flatten(data)
+	# return data.split(" ") if !data.is_a? Array
 
+	# data[0] + flatten(data[1..-1])
+	# data[0].join("")
+
+	# Given Solution
+	return [data] if !data.is_a?(Array)
+
+	flattened = []
+
+	data.each do |ele|
+		flattened += flatten(ele)
+	end
+
+	flattened
 end
