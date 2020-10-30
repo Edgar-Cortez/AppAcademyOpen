@@ -11,8 +11,12 @@
 # pow(2, 5) # => 32
 # pow(3, 4) # => 81
 # pow(4, 3) # => 64
-def pow(base, exponent)
-
+def pow(base, exponent)    
+	if exponent == 0
+			return 1
+	end
+	
+	base * pow(base, exponent - 1)
 end
 
 
