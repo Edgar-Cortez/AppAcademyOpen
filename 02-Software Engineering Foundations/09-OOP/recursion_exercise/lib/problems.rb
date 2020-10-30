@@ -67,7 +67,12 @@ end
 # sum_array([5, 2])         # => 7
 # sum_array([4, 10, -1, 2]) # => 15
 def sum_array(array)
+	if array == []
+		return 0
+	end
 
+	# Given Solution
+	array[0] + sum_array(array[1..-1])
 end
 
 
@@ -83,7 +88,11 @@ end
 # reverse_string("internet")    # => "tenretni"
 # reverse_string("friends")     # => "sdneirf"
 def reverse_string(str)
+	if str.empty?
+		return ""
+	end
 
+	reverse_string(str[1..-1]) + str[0]
 end
 
 
