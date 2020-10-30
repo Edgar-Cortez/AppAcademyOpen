@@ -39,7 +39,19 @@ end
 # lucas_number(5)   # =>    11
 # lucas_number(9)   # =>    76
 def lucas_number(n)
+	if n == 0
+		return 2
+	end
 
+	if n == 1
+		return 1
+	end
+
+	# Wrong
+	# (3 - n) + lucas_number(n - 1)
+
+	# Given Solution
+	lucas_number(n - 1) + lucas_number(n - 2)
 end
 
 
