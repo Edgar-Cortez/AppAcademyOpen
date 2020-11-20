@@ -70,6 +70,8 @@ class Hash
     self.each do |k, v|
       new_hash[k] = v if prc.call(k, v)
     end
+
+    new_hash
   end
 end
 
@@ -85,7 +87,7 @@ class String
   def substrings(length = nil)
     subs = []
     (0...self.length).each do |start_idx|
-      (start_idx..self.length).each do |end_idx|
+      (start_idx...self.length).each do |end_idx|
         sub =self[start_idx..end_idx]
         subs << sub
       end
@@ -109,6 +111,14 @@ class String
   # "bootcamp".caesar_cipher(2) #=> "dqqvecor"
   # "zebra".caesar_cipher(4)    #=> "difve"
   def caesar_cipher(num)
-  
+    new_str = ""
+    alpha = ("a".."z").to_a
+    self.each_char do |char|
+      start_pos = alpha.index(char)
+      new_pos = (start_pos + num) % 26
+      new_str += alpha[new_pos]
+    end
+
+    new_str
   end
 end
