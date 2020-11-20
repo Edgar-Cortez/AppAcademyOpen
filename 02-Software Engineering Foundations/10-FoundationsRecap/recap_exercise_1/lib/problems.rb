@@ -45,7 +45,9 @@ end
 #
 # find_bigrams("the theater is empty", ["cy", "em", "ty", "ea", "oo"])  # => ["em", "ty", "ea"]
 # find_bigrams("to the moon and back", ["ck", "oo", "ha", "at"])        # => ["ck", "oo"]
-def find_bigrams(str, bigrams); end
+def find_bigrams(str, bigrams)
+  bigrams.select { |bigram| str.include?(bigram) }
+end
 
 class Hash
   # Write a method, Hash#my_select, that takes in an optional proc argument
