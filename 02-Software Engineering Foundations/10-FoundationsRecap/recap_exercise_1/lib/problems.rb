@@ -27,7 +27,13 @@ end
 #
 # composite?(9)     # => true
 # composite?(13)    # => false
-def composite?(num); end
+def composite?(num)
+  (2...num).each do |i|
+    return true if num % i == 0
+  end
+
+  false
+end
 
 
 # A bigram is a string containing two letters.
